@@ -193,7 +193,7 @@
 1. Now let's add some validation to our models.
    1. In ActivityModel...
       1. Make Date, UserId, and ActivityTypeId [Required].
-1. We'd like Duration and Distance to be required in some cases (like Running), but not others (like Weights). Where should we implement this logic?
+1. We'd like Distance to be required in some cases (like Running), but not others (like Weights). Where should we implement this logic?
    1. In ActivityService, let's add some logic to check this.
       1. To do this check, we're going to have to retrieve an ActivityType object. This means our ActivityService needs an IActivityTypeRepository in _addition_ to IActivityRepository.
          1. Add another parameter to the ActivityService constructor so the IActivityTypeRepostory can be injected.
@@ -216,11 +216,6 @@
                 && Activity.Distance <= 0)
             {
                 throw new ApplicationException("You must supply a Distance for this activity.");
-            }
-            // for either type, you must supply a Duration
-            if (Activity.Duration <= 0)
-            {
-                throw new ApplicationException("You must supply a Duration for this activity.");
             }
       ```
 1. Test your API. Do your validation rules work?

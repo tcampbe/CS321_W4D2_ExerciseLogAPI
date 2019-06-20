@@ -15,6 +15,7 @@ namespace CS321_W4D2_ExerciseLogAPI.ApiModels
         // TODO: Make ActivityType a string property that will contain the name of the activity type (update the mapping code)
         public string ActivityType { get; set; }
 
+        [Required]
         public double Duration { get; set; }
         public double Distance { get; set; }
 

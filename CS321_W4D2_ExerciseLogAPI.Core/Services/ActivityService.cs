@@ -25,11 +25,6 @@ namespace CS321_W4D2_ExerciseLogAPI.Core.Services
             {
                 throw new ApplicationException("You must supply a Distance for this activity.");
             }
-            // for either type, you must supply a Duration
-            if (Activity.Duration <= 0)
-            {
-                throw new ApplicationException("You must supply a Duration for this activity.");
-            }
             _activityRepo.Add(Activity);
             return Activity;
         }
