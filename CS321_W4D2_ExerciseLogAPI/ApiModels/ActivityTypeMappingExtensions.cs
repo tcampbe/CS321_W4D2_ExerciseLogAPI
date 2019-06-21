@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using CS321_W4D2_ExerciseLogAPI.Core.Models;
 
 namespace CS321_W4D2_ExerciseLogAPI.ApiModels
 {
