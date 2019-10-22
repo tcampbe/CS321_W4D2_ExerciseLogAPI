@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CS321_W4D2_ExerciseLogAPI.Infrastructure.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,7 @@ namespace CS321_W4D2_ExerciseLogAPI
         public void ConfigureServices(IServiceCollection services)
         {
             // TODO: AddDbContext
+            services.AddScoped<AppDbContext>();
             // TODO: register repositories for injection
             // TODO: register services for injection
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);

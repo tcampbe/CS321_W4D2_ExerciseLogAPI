@@ -9,7 +9,7 @@ namespace CS321_W4D2_ExerciseLogAPI.Core.Models
 
     public class ActivityType
     {
-        public int Id { get; set;  }
+        public int Id { get; set; }
         public string Name { get; set; }
         public RecordType RecordType { get; set; }
     }
